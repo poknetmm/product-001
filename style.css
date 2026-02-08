@@ -30,6 +30,54 @@ body {
     min-height: 100vh;
     box-sizing: border-box;
     background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    transition: background-color 0.3s, color 0.3s;
+}
+
+[data-theme="dark"] body {
+    background-image: none;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 100;
+}
+
+.theme-toggle span {
+    font-size: 1.2rem;
+}
+
+.toggle-switch {
+    width: 56px;
+    height: 28px;
+    background-color: var(--toggle-bg);
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+    padding: 0;
+}
+
+.toggle-switch::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 22px;
+    height: 22px;
+    background-color: var(--toggle-knob);
+    border-radius: 50%;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+[data-theme="dark"] .toggle-switch::after {
+    transform: translateX(28px);
 }
 
 header {
