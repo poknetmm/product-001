@@ -4,6 +4,18 @@
     --text-color: #333;
     --white: #fff;
     --shadow-color: rgba(0, 0, 0, 0.1);
+    --toggle-bg: #ddd;
+    --toggle-knob: #fff;
+}
+
+[data-theme="dark"] {
+    --primary-color: #5a9ff2;
+    --background-color: #1a1a2e;
+    --text-color: #e0e0e0;
+    --white: #16213e;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --toggle-bg: #5a9ff2;
+    --toggle-knob: #1a1a2e;
 }
 
 body {
